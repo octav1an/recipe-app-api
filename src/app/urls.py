@@ -27,4 +27,5 @@ urlpatterns = [
     path(
         'api/docs/',
         SpectacularSwaggerView.as_view(url_name='api_schema')),
+    path('api/recipe/', include('recipe.urls'))
 ]
