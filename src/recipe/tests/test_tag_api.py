@@ -85,16 +85,6 @@ class PrivateTagsApiTest(TestCase):
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(res.data, serializer.data)
 
-    # def test_get_tag_detail(self):
-    #     """Test retrieving a tag"""
-    #     tag = create_tag(user=self.user)
-
-    #     res = self.client.get(detail_url(tag.id))
-    #     serializer = TagSerializer(res.data)
-
-    #     self.assertEqual(res.status_code, status.HTTP_200_OK)
-    #     self.assertEqual(res.data, serializer.data)
-
     def test_update_tag(self):
         """Test updating a tag"""
         tag = create_tag(self.user, name='After Dinner')
