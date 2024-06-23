@@ -34,4 +34,12 @@ Create superuser
 docker compose run --rm app sh -c "python manage.py createsuperuser"
 ```
 
-Admin page `http://localhost:8000/admin/`
+Admin page: `http://localhost:8000/admin/`
+API docs: `http://localhost:8000/api/docs/`
+
+### Authentication
+
+In order to use swagger you have to authenticate.
+
+1. Get token `/api/user/token/` using user and pass
+2. In swagger chose _tokenAuth_ and set: `Token <token>` and authorize
